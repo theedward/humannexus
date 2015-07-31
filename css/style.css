@@ -701,21 +701,21 @@
 /* Banner */
 
 	#banner {
-		background-image: url("../images/banner2.jpg");
+		/*background-image: url("../images/banner2.jpg");*/
 		background-position: center center;
 		background-size: cover;
-		height: 28em;
+		/*height: 28em;*/
 		text-align: center;
 		position: relative;
 	}
 
 		#banner header {
-			position: absolute;
+			position: relative;
 			bottom: 0;
 			left: 0;
 			width: 100%;
 			background: #212121;
-			background: rgba(27, 27, 27, 0.75);
+			background: rgba(27, 27, 27, 0.8);
 			color: #fff;
 			padding: 1.5em 0;
 		}
@@ -824,12 +824,20 @@
 			margin: 0;
 		}
 
-			#footer .icons a {
-				color: #999999;
+			#footer .icons .fa-twitter {
+				color: #4099FF;
 			}
-
+				
+			#footer .icons .fa-facebook {
+				color: #3B5998;
+			}
+			
+			#footer .icons .fa-linkedin {
+				color: #007bb6 ;
+			}
+			
 				#footer .icons a:hover {
-					color: #474747;
+					color: rgba(145, 145, 145, 0.68);
 				}
 
 		#footer .copyright {
