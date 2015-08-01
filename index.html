@@ -83,13 +83,32 @@
             .jssora11l.jssora11ldn { background-position: -251px -41px; }
             .jssora11r.jssora11rdn { background-position: -311px -41px; }
         </style>
-        
+        <style>
+        	.fb-like{ 
+			    width: 370px! important; 
+			    height: 80px! important;
+			}
+			.fb-like span, 
+			.fb-like iframe {
+			    width: 370px! important;
+			    height: 80px! important;
+			    margin-top: 2px;
+			}
+        </style>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-wide.css" />
 		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "https://connect.facebook.net/pt_PT/sdk.js#xfbml=1&appId=733466343432362&version=v2.4";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		
 	</head>
 	<body>
 
@@ -283,6 +302,7 @@
 						</section>
 					</div>
 				</div>
+				
 
 				<!-- Icons -->
 					<ul class="icons">
@@ -294,7 +314,11 @@
 				<!-- Copyright -->
 					<div class="copyright">
 						<ul class="menu">
-							<li>&copy; HUMA&#1048EXUS. All Rights Reserved</li><li>Design: <a href="https://github.com/theedward">João Seixas</a></li>
+							<li>
+								<div class="fb-like" data-href="https://www.humannexus.pt" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+							</li>
+							<li>&copy; HUMA&#1048EXUS. All Rights Reserved</li>
+							<li>Design: <a href="https://github.com/theedward">João Seixas</a></li>
 						</ul>
 					</div>
 
@@ -381,4 +405,3 @@
         });
     </script>
 </html>
--->
