@@ -111,13 +111,31 @@
 			<link rel="stylesheet" href="css/style-wide.css" />
 		</noscript>
 		<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "https://connect.facebook.net/pt_PT/sdk.js#xfbml=1&appId=733466343432362&version=v2.4";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
+		<script>
+		
+			(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "https://connect.facebook.net/pt_PT/sdk.js#xfbml=1&appId=733466343432362&version=v2.4";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+				
+			function sendMessage(){
+				var name = $("#name").val();
+				var subject = $("#subject").val();
+				var message = $("#message").val();
+				
+				var linker = "mailto:geral@humannexus.pt?subject=";
+					linker += subject;
+					linker += "&body= Mensagem de ";
+					linker += name + "\n";
+					linker += ": " + message;
+					
+				window.open(linker);
+				
+			}
+		</script>
 		
 	</head>
 	<body>
@@ -182,18 +200,19 @@
 		
 		            <!-- Slides Container -->
 		            <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1140px; 						height: 442px; overflow: hidden;">
+		            	<div>
+		                    <img u="image" src2="images/podologia.jpg" />
+		                </div>
 		                <div>
 		                    <img u="image" src2="images/img0.jpg" />
 		                </div>
 		                <div>
 		                    <img u="image" src2="images/img1.jpg" />
 		                </div>
-		                <div>
+		                <!--<div>
 		                    <img u="image" src2="images/img2.jpg" />
 		                </div>
-		                <div>
-		                    <img u="image" src2="images/podologia.jpg" />
-		                </div>
+		                -->
 		            </div>
 		            
 		            		            <!-- bullet navigator container -->
@@ -294,7 +313,7 @@
 										<input type="text" name="name" id="name" placeholder="Nome" />
 									</div>
 									<div class="6u 12u(3)">
-										<input type="email" name="email" id="email" placeholder="Email" />
+										<input type="text" name="subject" id="subject" placeholder="Assunto" />
 									</div>
 								</div>
 								<div class="row 50%">
