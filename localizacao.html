@@ -16,6 +16,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="https://use.fontawesome.com/9acca3057f.js"></script>
 		<style>
 			#map-canvas{
 				width:500px;
@@ -28,6 +29,10 @@
 				-o-border-radius: 100%;
 				-webkit-border-radius: 100%;
 				-moz-border-radius: 100%;
+			}
+			
+			.ul_locations {
+				margin-left:40px;	
 			}
 		</style>
 		<script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -122,17 +127,32 @@
 											<div id="map-canvas"></div>
 										</td>
 										<td style="vertical-align:top">
-											<p>Morada:</p>
-											<ul>
-												<li>Rua Maria Alda Barbosa Nogueira, nº13 C</li>
+											<p style="margin-left:30px">Morada:</p>
+											<ul class="ul_locations">
+												<li><i class="fa fa-map-marker" aria-hidden="true"></i> Rua Maria Alda Barbosa Nogueira, nº13 C</li>
 												<li>2720-969, Amadora</li>
 												<li>(Junto ao Parque Turma da Mónica)</li>
 												<br />
 												<br />
-												<li>Parque de Estacionamento gratuíto</li>
-												<li>Acesso para indivíduos com Mobilidade Reduzida</li>
-												<li>A 700m do Metro de Amadora Este</li>
-												<li>A 750m da Estação Ferroviária da Reboleira</li>
+												<li><i class="fa fa-car" aria-hidden="true"></i> Parque de Estacionamento Gratuito</li>
+												<br />
+												<li><i class="fa fa-wheelchair" aria-hidden="true"></i> Acesso para indivíduos com Mobilidade Reduzida com lugar de estacionamento assinalado</li>
+												<br />
+												<li><i class="fa fa-subway" aria-hidden="true"></i> Metro:<ul>
+														<li>A 700m do Metro de Amadora Este</li>
+														<li>A 650m do Metro da Reboleira</li>
+													</ul>
+												</li>
+												<br />
+												<li><i class="fa fa-train" aria-hidden="true"></i> Comboio:<ul>
+														<li>A 650m da Estação Ferroviária da Reboleira</li>
+													</ul>
+												</li>
+												<br />
+												<li><i class="fa fa-bus" aria-hidden="true"></i> Autocarro:<ul>
+														<li>Carreira 105 da Lisboa Transportes (com paragem mesmo em frente à clínica)</li>
+													</ul>
+												</li>
 											</ul>
 										</td>
 									</tr>
