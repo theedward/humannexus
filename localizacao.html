@@ -17,6 +17,10 @@
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
 		<script src="https://use.fontawesome.com/9acca3057f.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script src="node_modules/angular-cookies/angular-cookies.min.js"></script>
+		<script src="js/cookies.js"></script>
+
 		<style>
 			#map-canvas{
 				width:500px;
@@ -63,7 +67,7 @@
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
-	<body>
+	<body ng-app="humannexusApp">
 
 		<!-- Header -->
 			<div id="header">
@@ -178,31 +182,35 @@
 								<li><a href="localizacao.html">Localização</a></li>
 							</ul>
 						</section>
-						<section class="6u 12u(2)">
-							<h3>Entra em contacto connosco!</h3>
-							<form>
-								<div class="row 50%">
-									<div class="6u 12u(3)">
-										<input type="text" name="name" id="name" placeholder="Nome" />
+						<div ng-controller="writeCookie">
+							<section class="6u 12u(2)">
+								<h3>Entra em contacto connosco!</h3>
+								<form>
+									<div class="row 50%">
+										<div class="6u 12u(3)">
+											<input type="text" name="name" id="name" placeholder="Nome" />
+										</div>
+										<div class="6u 12u(3)">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
 									</div>
-									<div class="6u 12u(3)">
-										<input type="email" name="email" id="email" placeholder="Email" />
+									<div class="row 50%">
+										<div class="12u">
+											<textarea name="message" id="message" placeholder="Mensagem" rows="5"></textarea>
+										</div>
 									</div>
-								</div>
-								<div class="row 50%">
-									<div class="12u">
-										<textarea name="message" id="message" placeholder="Mensagem" rows="5"></textarea>
+									<div class="row 50%">
+										<div class="12u">
+											<ul class="actions">
+												<li><input type="submit" class="button alt" value="Enviar Mensagem" ng-click="sendMessage()"/></li>
+											</ul>
+										</div>
 									</div>
-								</div>
-								<div class="row 50%">
-									<div class="12u">
-										<ul class="actions">
-											<li><input type="submit" class="button alt" value="Enviar Mensagem" onClick="sendMessage()"/></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section>
+								</form>
+							</section>
+						</div>
+						<div ng-controller="readCookie">
+							<span ng-bind="message"></span>
 					</div>
 				</div>
 
@@ -224,4 +232,3 @@
 
 	</body>
 </html>
--->

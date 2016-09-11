@@ -121,19 +121,12 @@
 				  fjs.parentNode.insertBefore(js, fjs);
 				}(document, 'script', 'facebook-jssdk'));
 				
-			function sendMessage(){
-				var name = $("#name").val();
-				var subject = $("#subject").val();
-				var message = $("#message").val();
-				
-				var linker = "mailto:geral@humannexus.pt?subject=";
-					linker += subject;
-					linker += "&body= Mensagem de ";
-					linker += name + "\n";
-					linker += ": " + message;
-					
-				window.open(linker);
-				
+			function facebook_send_message() {
+			    FB.ui({
+			        app_id:'733466343432362',
+			        method: 'send',
+			        to:'Humannexuslda'
+			    });
 			}
 		</script>
 		
@@ -324,7 +317,7 @@
 								<div class="row 50%">
 									<div class="12u">
 										<ul class="actions">
-											<li><input type="submit" class="button alt" value="Enviar Mensagem" onClick="sendMessage()"/></li>
+											<li><input type="submit" class="button alt" value="Enviar Mensagem" onClick="facebook_send_message()"/></li>
 										</ul>
 									</div>
 								</div>
